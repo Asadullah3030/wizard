@@ -1,0 +1,277 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: gilroy;
+}
+@font-face {
+    font-family: gilroy;
+    /* src: url(./font/Gilroy-Medium.ttf); */
+    src: url(./font/Gilroy-Light.ttf);
+}
+body{
+    overflow-x: hidden;
+}
+nav{
+    padding: 40px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8vh;
+    background-color: rgba(128, 128, 128, 0.055);
+}
+.logo i{
+    font-size: 28px;
+    padding: 0 8px;
+    rotate: 45deg;
+    display: inline-block;
+    
+}
+.menu{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    font-weight: lighter;
+}
+.menu button{
+    padding: 13px 20px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    border: none;
+    font-size: 14px;
+}
+
+.mobileMenu{
+    display: none;
+}
+.menuIcon{
+    display: none;
+ }
+ .menuClose{
+    display: none;
+ }
+ .navfull{
+    z-index: 10;
+    transform: translateX(-230%);
+ }
+@media screen and (max-width:992px) {
+    .navfull{
+        backdrop-filter: blur(5px);
+        background-color: #b8ff6675;
+        width: 60%;
+        top: 0;
+        right: 0;
+        height: 100%;
+        position: fixed;
+    }
+     .menuIcon{
+        cursor: pointer;
+        display: block;
+        font-size: 26px;
+     }
+     .menuClose{
+        cursor: pointer;
+        position: absolute;
+        display: block;
+        right: 5%;
+        top: 6%;
+        font-size: 28px;
+     }
+    .mobileMenu{
+        padding: 40px 40px ;
+        gap: 30px;
+        display: flex;
+        flex-direction: column;
+    }
+    .mobileMenu h4{
+        overflow: hidden;
+        font-size: 30px;
+    }
+    .mobileMenu button{
+        padding: 13px 20px;
+        background-color: black;
+        color: white;
+        border: none;
+        font-size: 14px;
+        cursor: pointer;
+    }
+    .menu{
+        display: none;
+    }
+}
+
+@media screen and (max-width:678px) {
+    .navfull{
+        width: 70%;
+    }
+}
+
+/* hero is start  */
+
+@font-face {
+    font-family: neue;
+    src: url(./font/3856NeueMachina.ttf);
+}
+
+.hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 60px;
+}
+.left-hero{
+    flex: 3;
+}
+.left-hero h1{
+    line-height: 1.1;
+    font-family: neue;
+    font-size: 3rem;
+ }
+ .left-hero p{
+    margin-top: 0.9rem;
+ }
+ .left-hero button{
+    margin-top: 0.9rem;
+    padding: 13px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+ }
+.right-hero{
+    text-align: center;
+    flex: 3;
+}
+.right-hero img{
+    width: 84%;
+}
+
+@media screen and (max-width:992px) {
+    .hero{
+        display: flex;
+        flex-direction: column;
+    }
+    .left-hero{
+        text-align: center;
+    }
+    .right-hero img{
+        margin-top: 2rem;
+    }
+}
+
+/* hero is end  */
+
+/* social icon is start */
+
+.social-icon{
+    transform: translateX(0%);
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 60px;
+}
+.social-icon img{
+    width: 10rem;
+}
+.section1{
+    padding: 20px 60px;
+    gap: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.section1 h1{
+    background-color: #b8ff66;
+    padding: 4px 6px;
+    font-family: neue;
+    font-weight: 600;
+    border-radius: 7px;
+}
+.section1 p{
+    width: 60%;
+}
+
+/* social icon is end */
+
+/* services and four part box is start */
+    .section2{
+        width: 100%;
+        margin-top: 2rem;
+        padding: 20px 60px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .card1{
+        border-radius: 20px;
+        border: 0.2rem solid black;
+        box-shadow: 3px 6px 0px black;
+        width: 48%;
+        height: 17rem;
+        display: flex;
+        padding: 30px 30px;
+        justify-content: space-between;
+    }
+    .blacks{
+        background-color: black;
+    }
+    .whites{
+        color: white;
+    }
+    .box1{
+        width: 36%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .box1 h2{
+        font-family: neue;
+        border-radius: 10px;
+        padding: 3px 6px;
+        background-color: #b8ff66;
+    }
+    .box1 h4 i{
+        padding: 10px;
+        border-radius: 20px;
+        color: white;
+        background-color: black;
+    }
+    .box2{
+        text-align: center;
+        width: 50%;
+    }
+    .box2 img{
+        width: 100%;
+    }
+
+    @media screen and (max-width:992px) {
+        .section2{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 30px;
+        }
+        .card1{
+            width: 90%;
+        }
+        .section1{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+        .section1 p{
+            width: 98%;
+        }
+    }
+
+    @media screen and (max-width:728px) {
+        .box2 img{
+            display: none;
+        }
+        .box1{
+            width: 100%;
+        }
+    }
+/* services and four part box is end */
